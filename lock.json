@@ -1,0 +1,64 @@
+{
+    "memo": "",
+    "projects": [
+        {
+            "name": "github.com/ArithmeticPF/mt_api_gateway",
+            "branch": "master",
+            "revision": "ba34abdc9023520612bc6f95d000524f01c1fa13",
+            "packages": [
+                "grpc"
+            ]
+        },
+        {
+            "name": "github.com/golang/protobuf",
+            "branch": "master",
+            "revision": "8ee79997227bf9b34611aee7946ae64735e6fd93",
+            "packages": [
+                "proto"
+            ]
+        },
+        {
+            "name": "github.com/google/flatbuffers",
+            "branch": "master",
+            "revision": "6cc2307c71eec0ad690ad69f03a1d89655e526c8",
+            "packages": [
+                "go"
+            ]
+        },
+        {
+            "name": "github.com/jessevdk/go-assets",
+            "branch": "master",
+            "revision": "4f4301a06e153ff90e17793577ab6bf79f8dc5c5",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/julienschmidt/httprouter",
+            "branch": "master",
+            "revision": "d8ff598a019f2c7bad0980917a588193cf26666e",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "golang.org/x/net",
+            "branch": "master",
+            "revision": "f2499483f923065a842d38eb4c7f1927e6fc6e6d",
+            "packages": [
+                "context",
+                "http2",
+                "http2/hpack",
+                "trace"
+            ]
+        },
+        {
+            "name": "google.golang.org/grpc",
+            "branch": "master",
+            "revision": "21f8ed309495401e6fd79b3a9fd549582aed1b4c",
+            "packages": [
+                "."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+package {{.PackageName}}
+
+import (
+	"net/http"
+{{range .API}}
+  {{.Name}} "{{.ImportPath}}"
+{{- end}}
+	"github.com/julienschmidt/httprouter"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+)
+
+{{range .API}}
+// New{{.Name}}Router is httprouter for {{.Name}}
+func New{{.Name}}Router(conn *grpc.ClientConn) httprouter.Handle {
+	c := {{.Name}}.New{{.Name}}Client(conn)
+
+	return func(rw http.ResponseWriter, r *http.Request, params httprouter.Params) {
+		body, err := readBody(r.Body)
+		if err != nil {
+			http.Error(rw, err.Error(), http.StatusBadRequest)
+			return
+		}
+
+		ctx := context.Background()
+
+		b := newBuilderForFlatbuffersRawCodec(body)
+		var tab tabler
+		action := params.ByName("action")
+		switch action {
+		{{- range .Functions}}
+		case "{{.}}":
+			tab, err = c.{{.}}(ctx, b)
+		{{- end}}
+		default:
+			http.Error(rw, "NotFound", http.StatusNotFound)
+			return
+		}
+
+		if err != nil {
+			http.Error(rw, err.Error(), http.StatusBadRequest)
+			return
+		}
+
+		var res []byte
+		if tab != nil {
+			res = tab.Table().Bytes
+		}
+
+		_, err = rw.Write(res)
+		if err != nil {
+			http.Error(rw, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+}
+{{end}}

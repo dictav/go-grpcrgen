@@ -1,0 +1,12 @@
+include "./common.fbs";
+
+namespace myservice.user;
+
+table User {
+  name: Name;
+  sex: Sex;
+}
+
+rpc_service User{
+  Get(Request): User;
+}

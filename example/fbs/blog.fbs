@@ -1,0 +1,41 @@
+include './common.fbs';
+
+namespace myservice.blog;
+
+table Blog {
+  id: uint;
+  title: string;
+  text: string;
+}
+
+table ImageBlog {
+  id: uint;
+  title: string;
+  text: string;
+  image: string;
+}
+
+table GeoBlog {
+  id: uint;
+  title: string;
+  text: string;
+  geo: Geo;
+}
+
+union Box {
+  Blog,
+  ImageBlog
+}
+
+table Response {
+  body: Box;
+}
+
+table Request {
+  req: myservice.Request;
+  id: int;
+}
+
+rpc_service Blog {
+  Search(Request): Response;
+}

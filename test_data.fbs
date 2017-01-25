@@ -1,0 +1,17 @@
+namespace test_data;
+
+table Test { }
+
+rpc_service Test1Service {
+  DoTest(Test): Test;
+}
+
+rpc_service Test2Service {
+  DoTest(Test): Test;
+}
+
+namespace test_data.nest;
+
+rpc_service TestNestService {
+  DoTest(test_data.Test): test_data.Test;
+}

@@ -1,6 +1,6 @@
-# grpcrouter
+# grpcrgen
 
-grpcrouter reads generated grpc codes created by protoc or flatc, and generates a reverse-proxy router.
+grpcrgen reads generated grpc codes created by protoc or flatc, and generates a reverse-proxy router.
 
 It helps you to provide your gRPC APIs to Web browser.
 
@@ -35,13 +35,13 @@ digraph G {
 ## Instration
 
 ```sh
-go install github.com/dictav/go-grpcrouter
+go install github.com/dictav/go-grpcrgen
 ```
 
 ## Usage
 
 ```sh
-grpcrouter --framework httprouter <generated_pkg_dir>
+grpcrgen --framework httprouter <generated_pkg_dir>
 ```
 
 ## Alternative

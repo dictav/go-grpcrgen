@@ -1,0 +1,22 @@
+{
+    "dependencies": {
+        "github.com/ArithmeticPF/mt_api_gateway": {
+            "branch": "master"
+        },
+        "github.com/google/flatbuffers": {
+            "branch": "master"
+        },
+        "github.com/jessevdk/go-assets": {
+            "branch": "master"
+        },
+        "github.com/julienschmidt/httprouter": {
+            "branch": "master"
+        },
+        "golang.org/x/net": {
+            "branch": "master"
+        },
+        "google.golang.org/grpc": {
+            "branch": "master"
+        }
+    }
+}

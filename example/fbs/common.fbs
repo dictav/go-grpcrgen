@@ -1,0 +1,19 @@
+namespace myservice (Go:"github.com/dictav/go-grpcrgen/example");
+
+table Request {}
+
+table Name {
+  fist: string;
+  last: string;
+}
+
+table Geo {
+  latitube: int;
+  longitude: int;
+}
+
+enum Sex: byte { Female, Male, Other }
+
+rpc_service Common {
+  Hello(Request): Name;
+}
