@@ -70,7 +70,7 @@ func (cli *CLI) Run(args []string) int {
 
 	if err := cli.parse(args); err != nil {
 		if _, ok := err.(showVersion); ok {
-			return ExitCodeError
+			return ExitCodeOK
 		}
 		return ExitCodeError
 	}
