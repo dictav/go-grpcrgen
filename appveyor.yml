@@ -14,11 +14,12 @@ install:
   - appveyor DownloadFile https://storage.googleapis.com/golang/go%GOVERSION%.windows-amd64.msi
   - msiexec /i go%GOVERSION%.windows-amd64.msi /q
   - set Path=c:\go\bin;c:\gopath\bin;%Path%
+  - go get -u github.com/golang/dep/...
+  - dep ensure
 
 build: false
 deploy: false
 
 test_script:
-  - go build
   - go test -v -race .
   - go test -v -race ./cmd/...
