@@ -1,14 +1,6 @@
 {
-    "memo": "",
+    "memo": "93ef8503033bd429e6983548f8dd7e18273177e626c70c91f9eb56394bd81bc9",
     "projects": [
-        {
-            "name": "github.com/ArithmeticPF/mt_api_gateway",
-            "branch": "master",
-            "revision": "ba34abdc9023520612bc6f95d000524f01c1fa13",
-            "packages": [
-                "grpc"
-            ]
-        },
         {
             "name": "github.com/golang/protobuf",
             "branch": "master",
