@@ -1,14 +1,14 @@
-all: grpcrgen test
+all: myrouter test
 
-grpcrgen: myservice
-	grpcrgen
+myrouter: myservice
+	grpcrgen -o myrouter myservice
 
 myservice:
-	flatbuffers/flatc --go --grpc -I fbs fbs/*
+	flatc --go --grpc -I fbs fbs/*
 
 test:
 	go test
 
 clean:
 	rm -rf myservice
-	rm -rf grpcrgen
+	rm -rf myrouter

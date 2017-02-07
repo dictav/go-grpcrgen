@@ -1,4 +1,4 @@
-package grpcrgen
+package myrouter
 
 import (
 	"errors"
