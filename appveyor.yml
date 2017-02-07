@@ -10,6 +10,7 @@ init:
   - git config --global core.autocrlf input
 
 install:
+  - echo %cd%
   - rmdir c:\go /s /q
   - appveyor DownloadFile https://storage.googleapis.com/golang/go%GOVERSION%.windows-amd64.msi
   - msiexec /i go%GOVERSION%.windows-amd64.msi /q
@@ -19,7 +20,11 @@ install:
 build: false
 deploy: false
 
+before_test:
+  - echo %cd%
+
 test_script:
+  - echo %cd%
   - dep ensure
   - go test -v -race .
   - go test -v -race ./cmd/...
