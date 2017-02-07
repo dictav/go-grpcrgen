@@ -7,7 +7,10 @@ clean:
 	rm grpcrgen
 
 test: test_data
-	go test
+	go test -v -race
+	go test -v -race ./cmd/...
+	go test -v -race ./example
+
 
 test_data:
 	flatc --go --grpc test_data.fbs
