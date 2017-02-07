@@ -1,6 +1,8 @@
 # grpcrgen
 
 [![Build Status](https://travis-ci.org/dictav/go-grpcrgen.svg?branch=master)](https://travis-ci.org/dictav/go-grpcrgen)
+[![Build status](https://ci.appveyor.com/api/projects/status/oat9q5j05dqnrir3/branch/master?svg=true)](https://ci.appveyor.com/project/dictav/go-grpcrgen/branch/master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dictav/go-grpcrgen)](https://goreportcard.com/report/github.com/dictav/go-grpcrgen)
 
 grpcrgen reads generated grpc codes created by protoc or flatc, and generates a reverse-proxy router.
 
