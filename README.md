@@ -1,5 +1,7 @@
 # grpcrgen
 
+[![Build Status](https://travis-ci.org/dictav/go-grpcrgen.svg?branch=master)](https://travis-ci.org/dictav/go-grpcrgen)
+
 grpcrgen reads generated grpc codes created by protoc or flatc, and generates a reverse-proxy router.
 
 It helps you to provide your gRPC APIs to Web browser.
