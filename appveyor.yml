@@ -19,9 +19,7 @@ install:
 build: false
 deploy: false
 
-before_test:
-  - dep ensure
-
 test_script:
+  - dep ensure
   - go test -v -race .
   - go test -v -race ./cmd/...
