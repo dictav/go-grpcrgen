@@ -35,13 +35,13 @@ digraph G {
 ## Instration
 
 ```sh
-go install github.com/dictav/go-grpcrgen
+go install github.com/dictav/go-grpcrgen/cmd/grpcrgen
 ```
 
 ## Usage
 
 ```sh
-grpcrgen --framework httprouter <generated_pkg_dir>
+grpcrgen -o <output_dir> <flatc_generated_dir>
 ```
 
 ## Alternative
