@@ -47,7 +47,7 @@ func executeTemplate(name string, params interface{}) (out []byte, err error) {
 	template.Must(t.Parse(tmpl))
 	t.Execute(w, params)
 
-	return format.Source(w.Bytes())
+	return w.Bytes(), nil
 }
 
 // Generate http HandleFunc
@@ -231,7 +231,6 @@ func generateRouter(w io.Writer, dir, packageName string) error {
 
 	ret, err := extractAPI(dir)
 	if err != nil {
-		logger.Println("HERE1")
 		return err
 	}
 
@@ -250,6 +249,5 @@ func generateRouter(w io.Writer, dir, packageName string) error {
 	}
 
 	_, err = w.Write(out)
-	logger.Println("HERE3")
 	return err
 }
