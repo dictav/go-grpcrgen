@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"go/ast"
 	"go/build"
-	"go/format"
+	_ "go/format"
 	"go/parser"
 	"go/token"
 	"io"
