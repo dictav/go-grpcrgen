@@ -1,4 +1,4 @@
-namespace myservice (Go:"github.com/dictav/go-grpcrgen/example");
+namespace myservice;
 
 table Request {}
 
