@@ -48,6 +48,10 @@ go install github.com/dictav/go-grpcrgen/cmd/grpcrgen
 grpcrgen -o <output_dir> <flatc_generated_dir>
 ```
 
+## Additional reading
+
+- [PROTOCOL-WEB](https://github.com/grpc/grpc/blob/9d59861bc6dd969c9d42e0d8f83c4a77ba6ddc84/doc/PROTOCOL-WEB.md)
+
 ## Alternative
 
 - [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway)
