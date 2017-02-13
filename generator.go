@@ -231,6 +231,7 @@ func generateRouter(w io.Writer, dir, packageName string) error {
 
 	ret, err := extractAPI(dir)
 	if err != nil {
+		logger.Println("HERE1")
 		return err
 	}
 
@@ -244,9 +245,11 @@ func generateRouter(w io.Writer, dir, packageName string) error {
 
 	out, err := executeTemplate(routerTemplate, params)
 	if err != nil {
+		logger.Println("HERE2")
 		return err
 	}
 
 	_, err = w.Write(out)
+	logger.Println("HERE3")
 	return err
 }
